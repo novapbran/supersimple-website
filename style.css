@@ -1,88 +1,50 @@
-body {
-    background: radial-gradient(circle,#2c3e50,#000 );
-    min-height: 100vh;
+* {
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
-
-
+    min-height: 100vh;
+    background: whitesmoke;
+        
+}
+h2 {
+    font-size: 3em;
+    color: #e94d58;
+    margin: 15px 0;
 }
 
-.flower {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin: 100px auto;
-
-}
-
-.center {
-    position: absolute;
-    z-index: 1;
-    width: 40px;
+.btn-group {
+    width: 100%;
     height: 40px;
-    background: #FFD700;
-    border-radius: 50%;
-    top:  60px;
-    left: 80px;
-    animation: pulse 2s infinite 4s;
-
-}
-.petal {
-    position: absolute;
-    top: 0px;
-    left: 80px;
-    width: 40px;
-    height: 80px;
-    background: linear-gradient(to bottom,#FF69B4, #FF1493);
-    border-radius: 20px 20px 0 0;
-    transform-origin: bottom center;
-    opacity: 0;
-    animation: bloom 4s forwards;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
-@keyframes bloom {
-    0%{
-        transform: scale(0) rotate(0deg);
-        opacity: 0;
-
-    }
-    100% {
-        transform: scale(1) rotate(var(--rot));
-        opacity: 1;
-    }
-}   
-
-@keyframes pulse {
-    0% { transform: scale(1);}
-    50% { transform: scale(1.1);}
-    100% { transform: scale(1);}
-
+button {
+    position:absolute;
+    width: 150px;
+    height: inherit;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px gray;
+    border: 2px solid #e94d58;
+    font-size: 1.2em;
 }
 
+button:nth-child(1) {
+    margin-left: -200px;
+    background: #e94d58;
+}
 
-.petal:nth-child(1) {--rot: 0deg;
-animation-delay: 0.2s;}
-.petal:nth-child(2) {--rot: 30deg;
-animation-delay: 0.4s;}
-.petal:nth-child(3) {--rot: 60deg; 
-animation-delay: 0.6s;}
-.petal:nth-child(4) {--rot: 90deg;
-animation-delay: 0.8s;}
-.petal:nth-child(5) {--rot: 120deg;
-animation-delay: 1.0s;}
-.petal:nth-child(6) {--rot: 150deg; 
-animation-delay: 1.2s;}
-.petal:nth-child(7) {--rot: 180deg;
-animation-delay: 1.4s;}
-.petal:nth-child(8) {--rot: 210deg;
-animation-delay: 1.6s;}
-.petal:nth-child(9) {--rot: 240deg; 
-animation-delay: 1.8s;}
-.petal:nth-child(10) {--rot: 270deg; 
-animation-delay:2.0s;}
-.petal:nth-child(11) {--rot: 300deg;
-animation-delay: 2.2s;}
-.petal:nth-child(12) {--rot: 330deg;
-animation-delay: 2.4s;}
+button:nth-child(2) {
+    margin-right: -200px;
+    background: #e94d58;
+}
